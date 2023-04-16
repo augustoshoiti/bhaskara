@@ -15,7 +15,7 @@ h1 {
 }
 
 p {
-    margin-top: 40px;
+    margin: 40px 0 50px 0;
 }
 
 form  {
@@ -42,6 +42,7 @@ button {
     padding: 8px;
     width: 245px;
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .confirm {
@@ -62,5 +63,5 @@ button {
 
 .reset:hover {
     box-shadow: rgb(157, 155, 155) -245px 0 0 1px inset;
-    color: #fff;
+    color: #fff; 
 }
