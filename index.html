@@ -2,35 +2,38 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
 
     <title>calculadora de Bhaskara</title>
 </head>
 
 <body>
-    <h1>Calculadora de Bhaskara</h1>
+    <div class="container">
+        <h1 class="title">Calculadora de Bhaskara</h1>
 
-    <form name="bhask">
-        Informe o valor de A:
-        <input type="number" name="a" placeholder="Digite um número">
-        <br>
-        Informe o valor de B:
-        <input type="number" name="b" placeholder="Digite um número">
-        <br>
-        Informe o valor de C:
-        <input type="number" name="c" placeholder="Digite um número">
-        <br>
+        <form class="calc" name="bhask">
+            <label for="valor_de_a">Informe o valor de A:</label>
+            <input class="entrada" type="number" id="valor_de_a" name="a" placeholder="Digite um número" />
+            <br/>
+            <label for="valor_de_b">Informe o valor de B:</label>
+            <input class="entrada" type="number" id="valor_de_b" name="b" placeholder="Digite um número" />
+            <br/>
+            <label for="valor_de_c">Informe o valor de C:</label>
+            <input class="entrada" type="number" id="valor_de_c" name="c" placeholder="Digite um número" />
+            <br/>
 
-        <button class="confirm" type="button" id="confirm" onclick="calcular()">Confirmar</button><br>
-        <button class="reset" type="button" onclick="window.location.reload();">Refazer</button>
-    </form>
+            <button class="btn" type="button" id="confirm" onclick="calcular()">Confirmar</button>
+            <br/>
+            <button class="btn" type="button" onclick="window.location.reload();">Refazer</button>
+        </form>
 
-    <p class="resp"></p>
+        <p class="resp"></p>
+    </div>
 </body>
 
 </html>

@@ -30,7 +30,7 @@ function calcular() {
 
     delta = Math.pow(b, 2) - 4 * a * c;
 
-    if (delta < 0 ) {
+    if (delta <= 0 ) {
         window.alert("Delta é invalido, tente outros valores");
         return;
     } else {
