@@ -19,10 +19,11 @@ document.querySelector("form").addEventListener("input", function() {
     confirmButton.disabled = !checkInput();
 });
 
+const tag = document.querySelector(".resp");
+
 //Executando os cálculos
 function calcular() {
     let a, b, c, delta, x1, x2, xv, yv, txt;
-    const tag = document.querySelector(".resp");
 
     a = document.bhask.a.value;
     b = document.bhask.b.value;
@@ -45,4 +46,10 @@ function calcular() {
         tag.innerHTML += "xv = " +  xv + "<br>";
         tag.innerHTML += "yv = " +  yv + "<br>";
     }
+}
+
+//Zerando a tag <p> e desabilitando o botão #confirm
+function refazer() {
+    tag.innerHTML = "";
+    confirmButton.disabled = true;
 }
