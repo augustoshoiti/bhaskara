@@ -48,7 +48,7 @@ function calcular() {
     }
 }
 
-//Zerando a tag <p> e desabilitando o botão #confirm
+//Zerando o elemento .resp e desabilitando o botão #confirm
 function refazer() {
     tag.innerHTML = "";
     confirmButton.disabled = true;
