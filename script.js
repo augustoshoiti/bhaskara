@@ -31,8 +31,8 @@ function calcular() {
 
     delta = Math.pow(b, 2) - 4 * a * c;
 
-    if (delta <= 0) {
-        window.alert("Delta é invalido, tente outros valores");
+    if (isNaN(delta) || delta <= 0) {
+        window.alert("\u{1F913} Os valores inseridos são inválidos, tente outros.");
         return;
     } else {
         x1 = (-b + Math.sqrt(delta)) / (2 * a);
