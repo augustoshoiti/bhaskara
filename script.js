@@ -40,11 +40,11 @@ function calcular() {
         xv = -b / (2 * a);
         yv = -delta / (4 * a);
 
-        tag.innerHTML = '<div class="resp-content">' + "<span>Delta = </span>" + "<span>" + delta + '</span>' + '</div>';
-        tag.innerHTML += '<div class="resp-content">' + "<span>x1 = </span>" + "<span>" + x1 + '</span>' + '</div>';
-        tag.innerHTML += '<div class="resp-content">' + "<span>x2 = </span>" + "<span>" + x2 + '</span>' + '</div>';
-        tag.innerHTML += '<div class="resp-content">' + "<span>xv = </span>" + "<span>" + xv + '</span>' + '</div>';
-        tag.innerHTML += '<div class="resp-content">' + "<span>yv = </span>" + "<span>" + yv + '</span>' + '</div>';
+        tag.innerHTML = `<div class="resp-content"><span>Delta = </span><span> ${delta} </span></div>`;
+        tag.innerHTML += `<div class="resp-content"><span>x1 = </span><span> ${x1} </span></div>`;
+        tag.innerHTML += `<div class="resp-content"><span>x2 = </span><span> ${x2} </span></div>`;
+        tag.innerHTML += `<div class="resp-content"><span>xv = </span><span> ${xv} </span></div>`;
+        tag.innerHTML += `<div class="resp-content"><span>yv = </span><span> ${yv} </span></div>`;
     }
 }
 
@@ -53,4 +53,3 @@ function refazer() {
     tag.innerHTML = "";
     confirmButton.disabled = true;
 }
-
