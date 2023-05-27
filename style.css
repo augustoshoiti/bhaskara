@@ -7,22 +7,23 @@
 }
 
 body {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 .container {
     margin: 30px;
     height: 100%;
     width: 90%;
-    max-width: 900px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    gap: 30px;
 }
 
 .container h1 {
