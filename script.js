@@ -31,7 +31,7 @@ function calcular() {
 
     delta = Math.pow(b, 2) - 4 * a * c;
 
-    if (delta <= 0 ) {
+    if (delta <= 0) {
         window.alert("Delta é invalido, tente outros valores");
         return;
     } else {
@@ -40,11 +40,11 @@ function calcular() {
         xv = -b / (2 * a);
         yv = -delta / (4 * a);
 
-        tag.innerHTML = "Delta = " +  delta + "<br>";
-        tag.innerHTML += "x1 = " +  x1 + "<br>";
-        tag.innerHTML += "x2 = " +  x2 + "<br>";
-        tag.innerHTML += "xv = " +  xv + "<br>";
-        tag.innerHTML += "yv = " +  yv + "<br>";
+        tag.innerHTML = '<div class="resp-content">' + "<span>Delta = </span>" + "<span>" + delta + '</span>' + '</div>';
+        tag.innerHTML += '<div class="resp-content">' + "<span>x1 = </span>" + "<span>" + x1 + '</span>' + '</div>';
+        tag.innerHTML += '<div class="resp-content">' + "<span>x2 = </span>" + "<span>" + x2 + '</span>' + '</div>';
+        tag.innerHTML += '<div class="resp-content">' + "<span>xv = </span>" + "<span>" + xv + '</span>' + '</div>';
+        tag.innerHTML += '<div class="resp-content">' + "<span>yv = </span>" + "<span>" + yv + '</span>' + '</div>';
     }
 }
 
@@ -53,3 +53,4 @@ function refazer() {
     tag.innerHTML = "";
     confirmButton.disabled = true;
 }
+
