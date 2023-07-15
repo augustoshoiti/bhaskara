@@ -19,22 +19,22 @@ document.querySelector("form").addEventListener("input", function() {
     confirmButton.disabled = !checkInput();
 });
 
-const tag = document.querySelector(".resp");
-
 //Executando os cálculos
 function calcular() {
     let a, b, c, delta, x1, x2, xv, yv;
 
-    a = document.bhask.a.value;
-    b = document.bhask.b.value;
-    c = document.bhask.c.value;
+    a = Number(document.bhask.a.value);
+    b = Number(document.bhask.b.value);
+    c = Number(document.bhask.c.value);
 
-    delta = Math.pow(b, 2) - 4 * a * c;
+    delta = b ** 2 - 4 * a * c;
 
     if (isNaN(delta) || delta <= 0) {
         alert("\u{1F913} Os valores inseridos são inválidos, tente outros.");
         return;
     } else {
+        const tag = document.querySelector(".resp");
+
         x1 = (-b + Math.sqrt(delta)) / (2 * a);
         x2 = (-b - Math.sqrt(delta)) / (2 * a);
         xv = -b / (2 * a);
@@ -50,6 +50,7 @@ function calcular() {
 
 //Zerando o elemento .resp e desabilitando o botão #confirm
 function refazer() {
+    const tag = document.querySelector(".resp");
     tag.innerHTML = "";
     confirmButton.disabled = true;
 }
