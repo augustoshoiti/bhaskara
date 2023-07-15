@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,43 +9,47 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <script defer src="script.js"></script>
 
     <title>calculadora de Bhaskara</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="container">
-      <h1>Calculadora de Bhaskara</h1>
+        <h1>Calculadora de Bhaskara</h1>
 
-      <form class="calc" name="bhask">
-        
-        <div class="calc-entrada">
-            <label for="valor_de_a">Informe o valor de A:</label>
-            <input class="entrada" type="text" id="valor_de_a" name="a" placeholder="Digite um número" autocomplete="off"/>
-        </div>
-        
-        <div class="calc-entrada">
-            <label for="valor_de_b">Informe o valor de B:</label>
-            <input class="entrada" type="text" id="valor_de_b" name="b" placeholder="Digite um número" autocomplete="off"/>
-        </div>
-        
-        <div class="calc-entrada">
-            <label for="valor_de_c">Informe o valor de C:</label>
-            <input class="entrada"type="text" id="valor_de_c"name="c"placeholder="Digite um número" autocomplete="off"/>
-        </div>
-            
-        <div class="calc-btn">
-            <button class="btn " type="button" id="confirm" onclick="calcular()">Confirmar</button>
-            <button class="btn" type="reset" onclick="refazer()">Refazer</button>
-        </div>
-      </form>
+        <form class="calc" name="bhask">
+            <div class="calc-entrada">
+                <label for="valor_de_a">Informe o valor de A:</label>
+                <input class="entrada" type="text" id="valor_de_a" name="a" placeholder="Digite um número"
+                    autocomplete="off" />
+            </div>
 
-      <div class="resp"></div>
+            <div class="calc-entrada">
+                <label for="valor_de_b">Informe o valor de B:</label>
+                <input class="entrada" type="text" id="valor_de_b" name="b" placeholder="Digite um número"
+                    autocomplete="off" />
+            </div>
+
+            <div class="calc-entrada">
+                <label for="valor_de_c">Informe o valor de C:</label>
+                <input class="entrada" type="text" id="valor_de_c" name="c" placeholder="Digite um número"
+                    autocomplete="off" />
+            </div>
+
+            <div class="calc-btn">
+                <button class="btn" type="button" id="confirm" onclick="calcular()">
+                    Confirmar
+                </button>
+                <button class="btn" type="reset" onclick="refazer()">
+                    Refazer
+                </button>
+            </div>
+        </form>
+
+        <div class="resp"></div>
     </div>
-  </body>
+</body>
+
 </html>
