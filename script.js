@@ -1,3 +1,10 @@
+let confirmButton = document.querySelector("#confirm");
+confirmButton.disabled = true;
+
+document.querySelector("form").addEventListener("input", function () {
+    confirmButton.disabled = !checkInput();
+});
+
 //Verificando se todos os campos estão preenchidos
 function checkInput() {
     let filled = true;
@@ -12,38 +19,37 @@ function checkInput() {
     return filled;
 }
 
-let confirmButton = document.querySelector("#confirm");
-confirmButton.disabled = true;
-
-document.querySelector("form").addEventListener("input", function() {
-    confirmButton.disabled = !checkInput();
-});
+function escreva(string, value) {
+    return `<div class="resp-content"><span>${string} = </span><span> ${value} </span></div>`
+}
 
 //Executando os cálculos
 function calcular() {
-    let a, b, c, delta, x1, x2, xv, yv;
+    const tag = document.querySelector(".resp");
+    if (tag.innerHTML === "") {
+        let a, b, c, delta, x1, x2, xv, yv;
 
-    a = Number(document.bhask.a.value);
-    b = Number(document.bhask.b.value);
-    c = Number(document.bhask.c.value);
+        a = Number(document.bhask.a.value);
+        b = Number(document.bhask.b.value);
+        c = Number(document.bhask.c.value);
 
-    delta = b ** 2 - 4 * a * c;
+        delta = b ** 2 - 4 * a * c;
 
-    if (isNaN(delta) || delta <= 0) {
-        alert("\u{1F913} Os valores inseridos são inválidos, tente outros.");
-    } else {
-        const tag = document.querySelector(".resp");
+        if (isNaN(delta) || delta <= 0) {
+            alert("\u{1F913} Os valores inseridos são inválidos, tente outros.");
+        } else {
+            x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            xv = -b / (2 * a);
+            yv = -delta / (4 * a);
 
-        x1 = (-b + Math.sqrt(delta)) / (2 * a);
-        x2 = (-b - Math.sqrt(delta)) / (2 * a);
-        xv = -b / (2 * a);
-        yv = -delta / (4 * a);
-
-        tag.innerHTML = `<div class="resp-content"><span>Delta = </span><span> ${delta} </span></div>`;
-        tag.innerHTML += `<div class="resp-content"><span>x1 = </span><span> ${x1} </span></div>`;
-        tag.innerHTML += `<div class="resp-content"><span>x2 = </span><span> ${x2} </span></div>`;
-        tag.innerHTML += `<div class="resp-content"><span>xv = </span><span> ${xv} </span></div>`;
-        tag.innerHTML += `<div class="resp-content"><span>yv = </span><span> ${yv} </span></div>`;
+            tag.innerHTML +=
+                escreva('Delta', delta) +
+                escreva('x1', x1) +
+                escreva('x2', x2) +
+                escreva('xv', xv) +
+                escreva('yv', yv);
+        }
     }
 }
 
