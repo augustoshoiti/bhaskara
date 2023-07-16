@@ -31,7 +31,6 @@ function calcular() {
 
     if (isNaN(delta) || delta <= 0) {
         alert("\u{1F913} Os valores inseridos são inválidos, tente outros.");
-        // return;
     } else {
         const tag = document.querySelector(".resp");
 
