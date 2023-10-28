@@ -76,8 +76,12 @@ body {
     background-color: #fff;
 }
 
-.btn:hover {
+.btn:hover:enabled {
     background-color: rgba(157, 155, 155, 0.43);
+}
+
+#confirm:disabled {
+    cursor: default;
 }
 
 .resp {

@@ -1,27 +1,22 @@
-let confirmButton = document.querySelector("#confirm");
+const confirmButton = document.querySelector("#confirm");
+const inputs = document.getElementsByTagName("input");
 confirmButton.disabled = true;
 
-document.querySelector("form").addEventListener("input", function () {
-    confirmButton.disabled = !checkInput();
-});
-
 //Verificando se todos os campos estão preenchidos
-function checkInput() {
-    let filled = true;
-    let inputs = document.getElementsByTagName("input");
-
-    for (let i = 0; i < inputs.length; i++) {
-        if (inputs[i].value === "") {
-            filled = false;
-            break;
-        }
+document.querySelector("form").addEventListener("input", () => {
+    let filled = false;
+    for (const input of inputs) {
+        if (input.value === "") {
+                filled = true;
+                break;
+            }
     }
-    return filled;
-}
+    confirmButton.disabled = filled;
+});
 
 function escreva(string, value) {
     return `<div class="resp-content"><span>${string} = </span><span> ${value} </span></div>`
-}
+};
 
 //Executando os cálculos
 function calcular() {
@@ -48,13 +43,13 @@ function calcular() {
                 ((x1 === x2)? escreva('x', x1) : escreva('x1', x1) + escreva('x2', x2)) +
                 escreva('xv', xv) +
                 escreva('yv', yv);
-        }   
-    }
-}
+        };
+    };
+};
 
 //Zerando o elemento .resp e desabilitando o botão #confirm
 function refazer() {
     const tag = document.querySelector(".resp");
     tag.innerHTML = "";
     confirmButton.disabled = true;
-}
+};
