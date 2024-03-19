@@ -31,7 +31,7 @@ function calcular() {
         delta = b ** 2 - 4 * a * c;
 
         if (isNaN(delta) || delta < 0) {
-            alert("\u{1F913} Os valores inseridos são inválidos, tente outros.");
+            alert("\u{1F913} Os valores inseridos são inválidos ou a equação não possui raízes reais.");
         } else {
             x1 = (-b + Math.sqrt(delta)) / (2 * a);
             x2 = (-b - Math.sqrt(delta)) / (2 * a);
@@ -40,7 +40,7 @@ function calcular() {
 
             tag.innerHTML +=
                 escreva('Delta', delta) +
-                ((x1 === x2)? escreva('x', x1) : escreva('x1', x1) + escreva('x2', x2)) +
+                ((x1 === x2)? escreva('x1 = x2', x1) : escreva('x1', x1) + escreva('x2', x2)) +
                 escreva('xv', xv) +
                 escreva('yv', yv);
         };
