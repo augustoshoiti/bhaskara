@@ -31,7 +31,7 @@ function calcular() {
         delta = b ** 2 - 4 * a * c;
 
         if (isNaN(delta) || delta < 0) {
-            alert("\u{1F913} Os valores inseridos são inválidos ou a equação não possui raízes reais.");
+            alert("Os valores inseridos são inválidos ou a equação não possui raízes reais.");
         } else {
             x1 = (-b + Math.sqrt(delta)) / (2 * a);
             x2 = (-b - Math.sqrt(delta)) / (2 * a);
